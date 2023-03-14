@@ -42,3 +42,4 @@ If you enter data via standard input:
 $ python amort.py
 $ (Type your data)
 ```
+The output file will be named `amort.csv`
