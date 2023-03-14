@@ -3,7 +3,7 @@ if __name__ == "__main__":
     ts = s.strip().split(' ')
     assert len(ts) == 6, "[Error] Wrong input size. Please try again with a correct size."
     # vars
-    L = int(ts[0].replace(',', ''))
+    L = float(ts[0].replace(',', ''))
     r1 = float(int(ts[1])/100)
     r2 = float(int(ts[2])/100)
     n1 = int(ts[3])
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     f = open(path, 'w')
     remain, r = L, r1
     f.write(f"Time,Payment,Interest,Principal,Remaining principal\n")
-    f.write(f"{0},{0},{0},{0},{remain}\n")
+    f.write(f"{0},{0:.2f},{0:.2f},{0:.2f},{remain:.2f}\n")
     for t in range(1, total_t+1):
         if t == n1+1:
             r = r2
