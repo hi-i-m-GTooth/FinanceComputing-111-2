@@ -34,7 +34,7 @@ if __name__ == "__main__":
     for t in range(1, total_t+1):
         if t == n1+1:
             r = r2
-        interest = remain*(r/12)
+        interest = remain*(r/m)
         prin = pay-interest
         remain -= prin
         f.write(f"{t},{round(pay, 2):.2f},{round(interest, 2):.2f},{round(prin, 2):.2f},{round(remain, 2):.2f}\n")
