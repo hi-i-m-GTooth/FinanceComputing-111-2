@@ -2,12 +2,12 @@
 ## Description
 Write a binomial tree program to price a Bermudan option. The early exercise time points are T/4 and 3T/4 from now, where T is the time to maturity. The payoff function is max(K - S + 1,0). 
 ### Inputs
-(1) `S` (stock price) 
-(2) `K` (strike price)
-(3) `r` (annual interest rate continuously compounded)
-(4) `s` (annual volatility)
-(5) `T` (time to maturity in years)
-(6) `n` (number of time steps)
+(1) `S` (stock price)  
+(2) `K` (strike price)  
+(3) `r` (annual interest rate continuously compounded)  
+(4) `s` (annual volatility)  
+(5) `T` (time to maturity in years)  
+(6) `n` (number of time steps)  
 ### Outputs
 Option price. 
 
