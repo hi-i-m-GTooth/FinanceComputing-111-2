@@ -1,4 +1,4 @@
-# HW2 - Down-and-out Barrier Call
+# HW3 - Down-and-out Barrier Call
 ## Description
 Write a trinomial tree program to price a down-and-out barrier call.
 ### Inputs
