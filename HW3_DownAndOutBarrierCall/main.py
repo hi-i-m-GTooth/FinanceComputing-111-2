@@ -9,8 +9,8 @@ if __name__ == "__main__":
     deltaT = T/n
     eta = np.log(S0/H)/(s*sqrt(deltaT))
     lamb = eta/int(eta)
-    #print(lamb)
     mu = r - (s**2)/2
+    #print(lamb)
 
     u = e**(lamb*s*sqrt(deltaT))
     d = u**(-1)
@@ -36,7 +36,6 @@ if __name__ == "__main__":
         for j in range(2*n+1):
             if S[i, j] <= H:
                 S[i, j] = 0
-    #print(S[:, 77])
 
     # calculate option payoffs
     V = np.zeros((n+1, 2*n+1))
