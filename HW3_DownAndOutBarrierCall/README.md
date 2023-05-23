@@ -23,7 +23,7 @@ suppose that `S` = 95, `K` = 100, `r` = 10 (%), `s` = 25 (%), `H` = 90, and `T` 
 * Compress your files into a single file and name it **StudentID_HW_3** for easy reference.  
 
 ## Input format
-Please refer to 1.in for generating inputs. That is, `S K r s T H n`.  
+Please refer to 1.in for generating inputs. That is, `S K r s H T n`.  
 Note that you need to seperate those variables with spaces in one line.
 
 ## Execution
