@@ -1,17 +1,21 @@
 import numpy as np
 
 if __name__ == "__main__":
-    s = input()
-    ts = s.strip().split(' ')
-    S, K, r, s, T, n, N = float(ts[0]), float(ts[1]), float(ts[2])/100, float(ts[3])/100, float(ts[4]), int(ts[5]), int(ts[6])
+    
+    use_init = False
+    degree = 3
+    if use_init:
+        S, K, r, s, T, n, N = 101, 105, 5/100, 50/100, 3, 3, 8
+    else:
+        s = input()
+        ts = s.strip().split(' ')
+        S, K, r, s, T, n, N = float(ts[0]), float(ts[1]), float(ts[2])/100, float(ts[3])/100, float(ts[4]), int(ts[5]), int(ts[6])
 
 
     deltaT = T/n
     discount = np.exp(-r*deltaT)
     n_path = N
 
-    use_init = False
-    degree = 3
     if use_init:
         random_walk = np.array(
             [
@@ -32,11 +36,10 @@ if __name__ == "__main__":
         random_walk[:, 0] = S
 
         ### b. Random Walk for n steps
-        factor = np.exp((r-0.5*s*s)*deltaT + s*np.sqrt(deltaT)*np.random.normal(n_path))
         for i in range(1, n+1):
+            factor = np.exp((r-0.5*s*s)*deltaT + s*np.sqrt(deltaT)*np.random.normal(size=(n_path)))
             random_walk[:, i] = random_walk[:, i-1]*factor
         
-    # print(random_walk)
 
     ## 2. Generate Payoff as y and t-1 price as x, then do linear regression. For n times.
     payoff = np.maximum(0, K - random_walk)
